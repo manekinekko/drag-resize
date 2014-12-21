@@ -479,7 +479,6 @@ Element that enables any DOM element to be draggable and resizable.
 	      	left: 0, //parseInt(style.marginLeft, 10),
 	      	top: 0 //parseInt(style.marginTop, 10),
 	      };
-	      console.log(this.margin);
 
 	      position = this.position(newElement);
 	      dimension = this.dimension(newElement);
@@ -524,6 +523,11 @@ Element that enables any DOM element to be draggable and resizable.
 
 	    this.mouse.offset.x = 0;
 	    this.mouse.offset.y = 0;
+
+	    this.bbox.elmW = 0;
+	    this.bbox.elmH = 0;
+	    this.bbox.elmX = 0;
+	    this.bbox.elmY = 0;
 
     },
 
@@ -725,18 +729,19 @@ Element that enables any DOM element to be draggable and resizable.
     },
 
     onDimensionsChange: function(width, height, left, top) {
-    	this.bbox.elmW = this.width;
-			this.bbox.elmH = this.height;
-			this.bbox.elmX = this.left;
-			this.bbox.elmY = this.top;
-    	this.style.width = this.width + 'px';
-      this.style.height = this.height + 'px';
-      this.style.left = this.left + 'px';
-      this.style.top = this.top + 'px';
-
       var element = this.selectedElement;
 
       if(element){
+
+	    	this.bbox.elmW = this.width;
+				this.bbox.elmH = this.height;
+				this.bbox.elmX = this.left;
+				this.bbox.elmY = this.top;
+	    	this.style.width = this.width + 'px';
+	      this.style.height = this.height + 'px';
+	      this.style.left = this.left + 'px';
+	      this.style.top = this.top + 'px';
+
 	    	element.style.width = this.width + 'px';
 	      element.style.height = this.height + 'px';
 	      element.style.left = this.left + 'px';
