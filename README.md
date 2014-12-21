@@ -198,14 +198,6 @@ http-server ./
 
 This starts a web server on port 8000, so you can test your new element by navigating a browser to `localhost:8000/test/index.html`.
 
-### web-component-tester
-
-The tests are also compatible with [web-component-tester](https://github.com/Polymer/web-component-tester). You can run them on multiple local browsers via:
-
-```sh
-npm install -g web-component-tester
-wct
-```
 
 ## License
 
