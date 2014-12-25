@@ -18,7 +18,7 @@
 	/*transition: all 0.1s linear;*/
 }
 
-:host(.drag-n-resize-focus) {
+:host(.drag-resize-focus) {
 	z-index: 998;
 	position: absolute;
 }
@@ -29,7 +29,7 @@
 	position: absolute;
 }
 
-:host(.drag-n-resize-selected) {
+:host(.drag-resize-selected) {
 	border-color: rgb(0, 150, 253);
 	cursor: move;
 	display: block;
@@ -47,7 +47,7 @@
 	z-index: 10;
 }
 
-.drag-n-resize-handlers {
+.drag-resize-handlers {
 	position: absolute;
 	width: 5px;
 	height: 5px;
@@ -59,7 +59,7 @@
 	border: 1px solid rgb(255, 255, 255);
 }
 
-:host(.drag-n-resize-selected) .drag-n-resize-handlers {
+:host(.drag-resize-selected) .drag-resize-handlers {
  opacity: 1;
 }
 
@@ -80,7 +80,7 @@
 }
 
 
-.drag-n-resize-handlers:hover {
+.drag-resize-handlers:hover {
 	transform: scale(3); /*chrome*/
 	-webkit-transform: scale(3); /*nodewebkit*/
 }
@@ -88,48 +88,48 @@
 /*
  Individual corner classes - required for resize support.
 */
-.drag-n-resize-handlers[data-direction="tl"] {
+.drag-resize-handlers[data-direction="tl"] {
  top: -5px;
  left: -5px;
  cursor: nw-resize;
 }
-.drag-n-resize-handlers[data-direction="tm"] {
+.drag-resize-handlers[data-direction="tm"] {
  top: -5px;
  left: 50%;
  margin-left: -5px;
  cursor: n-resize;
 }
-.drag-n-resize-handlers[data-direction="tr"] {
+.drag-resize-handlers[data-direction="tr"] {
  top: -5px;
  right: -5px;
  cursor: ne-resize;
 }
 
-.drag-n-resize-handlers[data-direction="ml"] {
+.drag-resize-handlers[data-direction="ml"] {
  top: 50%;
  margin-top: -5px;
  left: -5px;
  cursor: w-resize;
 }
-.drag-n-resize-handlers[data-direction="mr"] {
+.drag-resize-handlers[data-direction="mr"] {
  top: 50%;
  margin-top: -5px;
  right: -5px;
  cursor: e-resize;
 }
 
-.drag-n-resize-handlers[data-direction="bl"] {
+.drag-resize-handlers[data-direction="bl"] {
  bottom: -5px;
  left: -5px;
  cursor: sw-resize;
 }
-.drag-n-resize-handlers[data-direction="bm"] {
+.drag-resize-handlers[data-direction="bm"] {
  bottom: -5px;
  left: 50%;
  margin-left: -5px;
  cursor: s-resize;
 }
-.drag-n-resize-handlers[data-direction="br"] {
+.drag-resize-handlers[data-direction="br"] {
  bottom: -5px;
  right: -5px;
  cursor: se-resize;

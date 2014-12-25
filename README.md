@@ -1,4 +1,4 @@
-drag-n-resize
+drag-resize
 ============
 
 This is a Polymer element that enables any DOM element to be draggable and resizable.
@@ -6,14 +6,14 @@ This is a Polymer element that enables any DOM element to be draggable and resiz
 ## Usage
 
 ```html
-<link rel="import" href="drag-n-resize.html">
+<link rel="import" href="drag-resize.html">
 ```
 
 Use this element:
 
 ```html
 <div class="content">
-	<drag-n-resize></drag-n-resize>
+	<drag-resize></drag-resize>
 
 	<!-- make this element draggable and resizable -->
 	<div>this is a DIV element.</div>
@@ -26,7 +26,7 @@ Use JavaScript to interact with the API:
   'use strict';
 
   document.addEventListener('polymer-ready', function() {
-    var dragNresize = document.querySelector('drag-n-resize');
+    var dragNresize = document.querySelector('drag-resize');
     document.querySelector('.content').addEventListener('click', function(event){
       
       dragNresize.focus(event.target);

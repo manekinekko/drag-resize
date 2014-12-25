@@ -15,31 +15,31 @@ Element that enables any DOM element to be draggable and resizable.
 
 ##### Example
 
-    <drag-n-resize></drag-n-resize>
+    <drag-resize></drag-resize>
 
-@element drag-n-resize
+@element drag-resize
 @blurb Element that enables any DOM element to be draggable and resizable.
 @status alpha
-@homepage https://github.io/manekinekko/drag-n-resize
+@homepage https://github.io/manekinekko/drag-resize
 -->
-<polymer-element name="drag-n-resize" 
+<polymer-element name="drag-resize" 
 	style="left:{{left}}px;top:{{top}}px;width:{{width}}px;height:{{height}}px;"
-	class="drag-n-resize" 
+	class="drag-resize" 
 	on-track="{{ontrack}}" 
 	on-tap="{{ontap}}"
 	>
   <template>
-    <link rel="stylesheet" href="drag-n-resize.css">
+    <link rel="stylesheet" href="drag-resize.css">
 		<core-drag-drop></core-drag-drop>
 		<div id="resizable_handlers">
-  		<div class="drag-n-resize-handlers" data-direction="tl"></div>
-    	<div class="drag-n-resize-handlers" data-direction="tm"></div>
-    	<div class="drag-n-resize-handlers" data-direction="tr"></div>
-    	<div class="drag-n-resize-handlers" data-direction="mr"></div>
-    	<div class="drag-n-resize-handlers" data-direction="ml"></div>
-    	<div class="drag-n-resize-handlers" data-direction="bl"></div>
-    	<div class="drag-n-resize-handlers" data-direction="bm"></div>
-    	<div class="drag-n-resize-handlers" data-direction="br"></div>
+  		<div class="drag-resize-handlers" data-direction="tl"></div>
+    	<div class="drag-resize-handlers" data-direction="tm"></div>
+    	<div class="drag-resize-handlers" data-direction="tr"></div>
+    	<div class="drag-resize-handlers" data-direction="mr"></div>
+    	<div class="drag-resize-handlers" data-direction="ml"></div>
+    	<div class="drag-resize-handlers" data-direction="bl"></div>
+    	<div class="drag-resize-handlers" data-direction="bm"></div>
+    	<div class="drag-resize-handlers" data-direction="br"></div>
     	
     	<core-tooltip class="fancy debug-info">
         x:{{selectedElement.left | ToFloor}} y:{{selectedElement.top | ToFloor}} w:{{selectedElement.width | ToFloor}} h:{{selectedElement.height | ToFloor}}
@@ -96,14 +96,14 @@ Element that enables any DOM element to be draggable and resizable.
      */
   	allowBlur: true,
 
-		/**
+    /**
      * `enable` is the attribute that toggles globally the resize.
      * 
      * @property enable
      * @type bool
      * @default true
      */	    	
-		enable: true,
+    enable: true,
 
     /**
      * `zIndex` is the highest Z-Index allocated.
@@ -402,7 +402,7 @@ Element that enables any DOM element to be draggable and resizable.
     },
 
     /**
-     * Update either the position or the dimension styling of both the selected element and drag-n-resize element.
+     * Update either the position or the dimension styling of both the selected element and drag-resize element.
      * 
      * @method updateStyle
      * @param {String} updateConfig Pass `'dimension'` to update the dimension values.
@@ -465,13 +465,13 @@ Element that enables any DOM element to be draggable and resizable.
 
     	this.blur();
 
-    	if ( this.enable && newElement && !newElement.classList.contains('drag-n-resize-selected') ) {
+    	if ( this.enable && newElement && !newElement.classList.contains('drag-resize-selected') ) {
 
     		this.selectedElement = newElement;
 	      
 	      // Show handle set
-	      this.classList.add('drag-n-resize-selected');
-	      this.selectedElement.classList.add('drag-n-resize-focus');
+	      this.classList.add('drag-resize-selected');
+	      this.selectedElement.classList.add('drag-resize-focus');
 	      
 	      // Record element attributes for mouseMove().
 	      style = newElement.currentStyle || window.getComputedStyle(newElement, '');
@@ -489,7 +489,7 @@ Element that enables any DOM element to be draggable and resizable.
 	      this.bbox.elmH = dimension.height;
 
 	      // Make sure the styles are correctly set 
-	      // this will put the drag-n-resize ontop of the selected element.
+	      // this will put the drag-resize ontop of the selected element.
 	      this.updateStyle();
 
 	      if (this.dragfocus) {
@@ -510,12 +510,12 @@ Element that enables any DOM element to be draggable and resizable.
 	      if (this.dragblur) {
 	        this.dragblur();
 	      }
-	      this.classList.remove('drag-n-resize-selected');
+	      this.classList.remove('drag-resize-selected');
 	    }
 
 	    if(this.selectedElement){
 	    	this.selectedElement.selected = false;
-	    	this.selectedElement.classList.remove('drag-n-resize-focus');
+	    	this.selectedElement.classList.remove('drag-resize-focus');
 	    }
 
 	    this.resizeHandle = null;

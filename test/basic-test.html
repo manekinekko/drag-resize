@@ -12,17 +12,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <title>drag-n-resize</title>
+  <title>drag-resize</title>
 
   <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <script src="../bower_components/web-component-tester/browser.js"></script>
 
   <!-- Step 1: import the element to test -->
-  <link rel="import" href="../drag-n-resize.html">
+  <link rel="import" href="../drag-resize.html">
 </head>
 <body>
 
-  <drag-n-resize></drag-n-resize>
+  <drag-resize></drag-resize>
   <div class="content">
     <div id="element1">this is a DIV element.</div>
     <div id="element2">this is a DIV element.</div>
@@ -30,9 +30,9 @@
 
   <script>
 
-  describe('drag-n-resize', function(){
+  describe('drag-resize', function(){
 
-    var dnr = document.querySelector('drag-n-resize');
+    var dnr = document.querySelector('drag-resize');
     var element1 = document.querySelector('#element1');
     var element2 = document.querySelector('#element2');
 

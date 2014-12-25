@@ -14,12 +14,12 @@
   <title>Drag'n'Resize Demo</title>
 
   <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-  <link rel="import" href="drag-n-resize.html">
+  <link rel="import" href="drag-resize.html">
 
 </head>
 <body unresolved>
 
-  <p>An example of using <code>&lt;drag-n-resize&gt;</code>:</p>
+  <p>An example of using <code>&lt;drag-resize&gt;</code>:</p>
 
   <style>
       body {
@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <drag-n-resize></drag-n-resize>
+    <drag-resize ></drag-resize>
     
     <div class="content">
       <div>
@@ -62,7 +62,7 @@
       'use strict';
 
       document.addEventListener('polymer-ready', function() {
-        var dragNresize = document.querySelector('drag-n-resize');
+        var dragNresize = document.querySelector('drag-resize');
         document.querySelector('.content').addEventListener('click', function(event){
           dragNresize.focus(event.target)
         }, false);
