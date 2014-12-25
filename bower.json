@@ -1,0 +1,31 @@
+{
+  "name": "drag-n-resize",
+  "version": "0.0.1",
+  "authors": [
+    "Wassim Chegham <maneki.nekko@gmail.com>"
+  ],
+  "description": "Enable any DOM element to be draggable and resizable.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "resize",
+    "resizable",
+    "drag",
+    "draggable"
+  ],
+  "main": "drag-n-resize.html",
+  "license": "MIT",
+  "homepage": "https://github.com/manekinekko/drag-n-resize/",
+  "ignore": [
+    "/.*",
+    "/tests/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.2",
+    "core-elements": "Polymer/core-elements#0.5.2"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^2.0.5"
+  }
+}
