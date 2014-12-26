@@ -27,6 +27,7 @@ Element that enables any DOM element to be draggable and resizable.
 	class="drag-resize" 
 	on-track="{{ontrack}}" 
 	on-tap="{{ontap}}"
+    attributes="select"
 	>
   <template>
     <link rel="stylesheet" href="drag-resize.css">
@@ -44,21 +45,21 @@ Element that enables any DOM element to be draggable and resizable.
     	<core-tooltip class="fancy debug-info">
         x:{{selectedElement.left | ToFloor}} y:{{selectedElement.top | ToFloor}} w:{{selectedElement.width | ToFloor}} h:{{selectedElement.height | ToFloor}}
       </core-tooltip>
-<!-- 	    <div id="debug_info" class="debug-info">
-	    	x:{{selectedElement.left | ToFloor}} y:{{selectedElement.top | ToFloor}} w:{{selectedElement.width | ToFloor}} h:{{selectedElement.height | ToFloor}}<br/>
-	    </div>
- -->
-	    <style>
-				#resizable_handlers {
-					-webkit-transform: scale({{zoomRatio}});
-					transform: scale({{zoomRatio}});
-				}
-	    </style>
+      <style>
+  			#resizable_handlers {
+  				-webkit-transform: scale({{zoomRatio}});
+  				transform: scale({{zoomRatio}});
+  			}
+      </style>
     </div>
 
   </template>
   <script>
   Polymer({
+
+    observe: {
+      select: null
+    },
   	
     /**
      * `aspectRatio` is a property that preserves the aspectRatio.
