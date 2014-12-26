@@ -32,18 +32,27 @@
     </style>
   </head>
   <body>
-    <drag-resize select=".resizable"></drag-resize>
+    <drag-resize></drag-resize>
     
     <div class="content">
-      <div>
+
+      <div drag-resize>
         this is a DIV element.
       </div>
-      <span>This is a SPAN element</span>
+      
+      <div>
+        THIS BLOCK IS NOT RESIZABLE NOR DRAGGABLE.
+      </div>
+
+      <span drag-resize>This is a SPAN element</span>
+      
       <!-- <p>
       Lorem <b>ipsum</b> dolor sit <i>amet</i>, consectetur <span>adipisicing</span> elit. Nulla, nam, eius, <em style="color:tomato">possimus</em> ut molestiae fugit nihil veritatis ipsa in porro nisi <a href="#">tempora</a> autem aliquam <strong>minima</strong> ab saepe sunt culpa adipisci!
       </p> -->
-      <img width="100" height="100" src="http://3.bp.blogspot.com/-hcuqejOUpo4/Tst6wsLV_wI/AAAAAAAAASs/joUV77YuV1o/s640/cat.jpg" alt="">
-      <video width="300" height="150" src="http://playground.html5rocks.com/samples/html5_misc/chrome_japan.mp4" controls autoplay></video>
+      
+      <img drag-resize width="100" height="100" src="http://3.bp.blogspot.com/-hcuqejOUpo4/Tst6wsLV_wI/AAAAAAAAASs/joUV77YuV1o/s640/cat.jpg" alt="">
+      
+      <video drag-resize width="300" height="150" src="http://playground.html5rocks.com/samples/html5_misc/chrome_japan.mp4" controls autoplay></video>
 
     </div>
   <script>
@@ -55,17 +64,6 @@
           element.style.top = Math.random()*500 + 'px';
           element.style.left = Math.random()*500 + 'px';
         }
-      });
-
-    })(wrap(document));
-    (function(document) {
-      'use strict';
-
-      document.addEventListener('polymer-ready', function() {
-        var dragNresize = document.querySelector('drag-resize');
-        document.querySelector('.content').addEventListener('click', function(event){
-          dragNresize.focus(event.target)
-        }, false);
       });
 
     })(wrap(document));

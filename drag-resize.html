@@ -27,7 +27,7 @@ Element that enables any DOM element to be draggable and resizable.
 	class="drag-resize" 
 	on-track="{{ontrack}}" 
 	on-tap="{{ontap}}"
-    attributes="select"
+  attributes="drag-resize"
 	>
   <template>
     <link rel="stylesheet" href="drag-resize.css">
@@ -57,10 +57,6 @@ Element that enables any DOM element to be draggable and resizable.
   <script>
   Polymer({
 
-    observe: {
-      select: null
-    },
-  	
     /**
      * `aspectRatio` is a property that preserves the aspectRatio.
      *
@@ -257,8 +253,8 @@ Element that enables any DOM element to be draggable and resizable.
      * This method returns the floor value from a decimal value.
      *
      * @method ToFloor
-     * @param {Number} decimal value
-     * @return {Number} the floor value 	
+     * @param {Number} value The decimal value to compute.
+     * @return {Number} the floor value.
      */
     ToFloor: function(value) {
 			return value | 0;
@@ -268,8 +264,7 @@ Element that enables any DOM element to be draggable and resizable.
      * This method is used to show all or a subset of the resize handlers.
      *
      * @method displayHandlers
-     * @param {Array} filters An array of the handlers to show. 
-     *                        If the array is empty or not provided, then all the handlers are shown.
+     * @param {Array} filters An array of the handlers to show. If the array is empty or not provided, then all the handlers are shown.
      */
     displayHandlers: function(filters){
 
@@ -766,7 +761,20 @@ Element that enables any DOM element to be draggable and resizable.
       Polymer.addEventListener(this, 'drag-start', this.drag.bind(this));
     },
     
-    domReady: function() {}
+    domReady: function() {
+      Polymer.addEventListener(document, 'mousedown', function(event){
+        var element = event.srcElement || event.target;
+        var filteredElements = element.classList.contains('drag-resize') || element.classList.contains('drag-resize-handlers') || element.getAttribute('drag-resize') !== null;
+        if(!element.classList.contains('drag-resize')){
+          if(filteredElements){
+            this.focus(element);
+          }
+          else {
+            this.blur(true);
+          }          
+        }
+      }.bind(this));
+    }
   });
   </script>
 </polymer-element>
