@@ -5,37 +5,32 @@ This is a Polymer element that enables any DOM element to be draggable and resiz
 
 ## Usage
 
+Install the component from bower:
+
+```shell
+bower install drag-resize
+```
+
+
+Insert the component into your page:
+
 ```html
 <link rel="import" href="drag-resize.html">
 ```
 
-Use this element:
+Use it:
 
 ```html
 <div class="content">
 	<drag-resize></drag-resize>
 
-	<!-- make this element draggable and resizable -->
+	<!-- add the attribute "drag-resize" to make this element draggable and resizable -->
+  <div drag-resize>this is a DIV element.</div>
+
+  <!-- element won't be draggable nor resizable -->
 	<div>this is a DIV element.</div>
 </div>
 ```
-
-Use JavaScript to interact with the API:
-```js
-(function(document) {
-  'use strict';
-
-  document.addEventListener('polymer-ready', function() {
-    var dragNresize = document.querySelector('drag-resize');
-    document.querySelector('.content').addEventListener('click', function(event){
-      
-      dragNresize.focus(event.target);
-
-    }, false);
-  });
-
-})(wrap(document));
-``` 
 
 ## Attributes
 
