@@ -25,9 +25,9 @@ Use it:
 	<drag-resize></drag-resize>
 
 	<!-- add the attribute "drag-resize" to make this element draggable and resizable -->
-  <div drag-resize>this is a DIV element.</div>
+	<div drag-resize>this is a DIV element.</div>
 
-  <!-- this element won't be draggable nor resizable -->
+	<!-- this element won't be draggable nor resizable -->
 	<div>this is a DIV element.</div>
 </div>
 ```
