@@ -1,6 +1,6 @@
 {
-  "name": "drag-n-resize",
-  "version": "0.0.1",
+  "name": "drag-resize",
+  "version": "0.0.2",
   "authors": [
     "Wassim Chegham <maneki.nekko@gmail.com>"
   ],
@@ -14,9 +14,9 @@
     "drag",
     "draggable"
   ],
-  "main": "drag-n-resize.html",
+  "main": "drag-resize.html",
   "license": "MIT",
-  "homepage": "https://github.com/manekinekko/drag-n-resize/",
+  "homepage": "https://github.com/manekinekko/drag-resize/",
   "ignore": [
     "/.*",
     "/tests/"
