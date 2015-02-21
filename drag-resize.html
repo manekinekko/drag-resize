@@ -6,14 +6,10 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../core-drag-drop/core-drag-drop.html">
-<link rel="import" href="../core-tooltip/core-tooltip.html">
-
 <!--
-Element that enables any DOM element to be draggable and resizable.
+`drag-resize` is an element that enables any DOM element to be draggable and resizable.
 
-##### Example
+Example:
 
     <drag-resize></drag-resize>
 
@@ -22,6 +18,9 @@ Element that enables any DOM element to be draggable and resizable.
 @status alpha
 @homepage https://github.io/manekinekko/drag-resize
 -->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-drag-drop/core-drag-drop.html">
+<link rel="import" href="../core-tooltip/core-tooltip.html">
 <polymer-element name="drag-resize" 
 	style="left:{{left}}px;top:{{top}}px;width:{{width}}px;height:{{height}}px;"
 	class="drag-resize" 
