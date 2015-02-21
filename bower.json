@@ -1,6 +1,7 @@
 {
   "name": "drag-resize",
-  "version": "0.0.3",
+  "private": false,
+  "version": "0.1.0",
   "authors": [
     "Wassim Chegham <maneki.nekko@gmail.com>"
   ],
@@ -28,6 +29,6 @@
     "core-elements": "Polymer/core-elements"
   },
   "devDependencies": {
-    "web-component-tester": "Polymer/web-component-tester"
+    "web-component-tester": "*"
   }
 }
