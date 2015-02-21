@@ -1,6 +1,6 @@
 {
   "name": "drag-resize",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Wassim Chegham <maneki.nekko@gmail.com>"
   ],
@@ -18,14 +18,16 @@
   "license": "MIT",
   "homepage": "https://github.com/manekinekko/drag-resize/",
   "ignore": [
-    "/.*",
-    "/tests/"
+    "**/.*",
+    "test",
+    "tests",
+    "node_modules"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^0.5.2",
-    "core-elements": "Polymer/core-elements#0.5.2"
+    "polymer": "Polymer/polymer",
+    "core-elements": "Polymer/core-elements"
   },
   "devDependencies": {
-    "web-component-tester": "Polymer/web-component-tester#^2.0.5"
+    "web-component-tester": "Polymer/web-component-tester"
   }
 }
